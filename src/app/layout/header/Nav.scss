@@ -1,0 +1,30 @@
+nav {
+  .container {
+    .nav__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .nav__links {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        a {
+          color: #fff;
+          font-family: Gilroy;
+          font-size: 22px;
+          font-weight: 400;
+          button {
+            margin-left: 131px;
+            border-radius: 10px;
+            border: 2px solid #1144fa;
+            color: #fff;
+            font-family: Gilroy;
+            font-size: 22px;
+            font-weight: 600;
+            padding: 10px 30px;
+          }
+        }
+      }
+    }
+  }
+}

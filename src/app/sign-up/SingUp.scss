@@ -1,3 +1,111 @@
-body{
-    background: #fff;
+body {
+  background: #fff;
+}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+.signup {
+  .signup__wrapper {
+    display: flex;
+    .signup__bg {
+      display: flex;
+      width: 50%;
+      max-height: 200vh;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: #3949ab;
+      &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        h2 {
+          color: var(--palette-jnt-white-color, #fff);
+          text-align: center;
+          font-family: Gilroy;
+          font-size: 30px;
+          font-weight: 600;
+          line-height: 200%;
+        }
+        p {
+          color: var(--palette-jnt-white-color, #fff);
+          font-family: Gilroy;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 200%;
+        }
+      }
+    }
+    .signup__fields {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 45px;
+      flex-direction: column;
+      .signup__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2 {
+          color: #3949ab;
+          font-family: Open Sans;
+          font-size: 40px;
+          font-weight: 600;
+        }
+      }
+      &__inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 80%;
+        margin-left: 50px;
+        .input {
+          display: flex;
+          align-items: center;
+          span {
+            margin-left: -40px;
+            font-size: 30px;
+            color: #3949ab;
+            &:active {
+              transform: scale(0.8);
+              transition: 0.2s;
+            }
+          }
+          label {
+            font-size: 23px;
+            color: #3949ab;
+            margin-right: -30px;
+            z-index: 2;
+          }
+          input {
+            padding: 20px 35px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            background: #fff;
+            width: 80%;
+            max-width: 545px;
+            border: 1px solid #3949ab;
+            &::placeholder {
+              color: #3949ab;
+              font-family: Open Sans;
+              font-size: 18px;
+              font-weight: 400;
+            }
+          }
+        }
+        button {
+          border-radius: 25px;
+          background: #3949ab;
+          width: 80%;
+          color: #fff;
+          font-family: Open Sans;
+          font-size: 18px;
+          font-weight: 400;
+          padding: 20px 0;
+        }
+      }
+    }
+  }
 }

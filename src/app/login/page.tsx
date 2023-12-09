@@ -1,5 +1,5 @@
 "use client";
-import "./SingUp.scss";
+import "./Login.scss";
 import { useState } from "react";
 import { inputInputLabel, loginBg, loginWelcome } from "../assets/img";
 import Image from "next/image";
@@ -7,8 +7,9 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { BsTelephone } from "react-icons/bs";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { CiLock } from "react-icons/ci";
+import Link from "next/link";
 
-const SignUp = () => {
+const Login = () => {
   const [passwordShown, setPasswordShown] = useState(false);
   return (
     <div className="signup">
@@ -30,34 +31,12 @@ const SignUp = () => {
           <div className="signup__fields__inputs">
             <div className="input">
               <label>
-                <Image src={inputInputLabel} alt="logo" />
-              </label>
-              <input type="text" spellCheck="false" placeholder="Ism" />
-            </div>
-            <div className="input">
-              <label>
-                <Image src={inputInputLabel} alt="logo" />
-              </label>
-              <input type="text" spellCheck="false" placeholder="Familiya" />
-            </div>
-            <div className="input">
-              <label>
                 <MdOutlineMailOutline />
               </label>
               <input
                 type="text"
                 spellCheck="false"
                 placeholder="Elektron pochta"
-              />
-            </div>
-            <div className="input">
-              <label>
-                <BsTelephone />
-              </label>
-              <input
-                type="text"
-                spellCheck="false"
-                placeholder="Telefon raqam"
               />
             </div>
             <div className="input">
@@ -78,7 +57,11 @@ const SignUp = () => {
                 {passwordShown ? <FaEyeSlash /> : <FaEye />}
               </span>
             </div>
-            <button>Ro’yxatdan o’tish</button>
+            <button>Platformaga kirish</button>
+            <div className="to-signup">
+              <p>Akkauntingiz yo’qmi?</p>
+              <Link href="/sign-up">Unda Ro’yxatdan o’ting!</Link>
+            </div>
           </div>
         </div>
       </div>
@@ -86,4 +69,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Login;

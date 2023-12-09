@@ -17,6 +17,7 @@ body {
       &__content {
         display: flex;
         flex-direction: column;
+        padding-bottom: 30px;
         align-items: center;
         margin-top: 20px;
         h2 {
@@ -55,7 +56,6 @@ body {
         }
       }
       &__inputs {
-        padding-bottom: 30px;
         display: flex;
         flex-direction: column;
         gap: 30px;
@@ -95,6 +95,12 @@ body {
               font-size: 18px;
               font-weight: 400;
             }
+            &:valid {
+              color: #000;
+              font-family: Open Sans;
+              font-size: 18px;
+              font-weight: 500;
+            }
           }
         }
         button {
@@ -106,6 +112,22 @@ body {
           font-size: 18px;
           font-weight: 400;
           padding: 20px 0;
+          &:active{
+            transition: 0.5s;
+            transform: scale(0.8);
+          }
+        }
+        .to-signup {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          color: #3949ab;
+          font-family: Open Sans;
+          font-size: 18px;
+          font-weight: 400;
+          a {
+            text-decoration: underline;
+          }
         }
       }
     }

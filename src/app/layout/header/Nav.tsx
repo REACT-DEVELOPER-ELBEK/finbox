@@ -8,7 +8,7 @@ import React from "react";
 
 const Nav = () => {
     const pathname = usePathname()
-  return pathname=="/sign-up"||pathname=="/login"?<></>:(
+  return pathname.includes("/login"||"/sign-up"||"/admin")?<></>:(
     <nav>
       <div className="container">
         <div className="nav__wrapper">

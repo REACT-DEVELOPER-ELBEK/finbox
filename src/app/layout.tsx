@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "./layout/header/Nav";
 import Footer from "./layout/footer/Footer";
+import { Providers } from "@/redux/provider/Providers";
 
 export const metadata: Metadata = {
   title: "Finbox",
@@ -17,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Nav />
-        {children}
+        <Providers>{children}</Providers>
         <Footer />
       </body>
     </html>

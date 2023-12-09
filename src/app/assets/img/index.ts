@@ -11,6 +11,12 @@ import masterCard from "./mastercard.svg";
 import zoodpay from "./zoodpay.svg";
 import zoodpayLogo from "./zoodpay-logo.svg";
 
+import heroChart from "./hero-chart.svg";
+
+import loginBg from "./login-bg.svg";
+
 export { navLogo };
 export { footerTwitter, footerFacebook, footerTelegram, footerInstagram };
 export { upay, payme, masterCard, zoodpay, zoodpayLogo };
+export { heroChart };
+export { loginBg };

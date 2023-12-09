@@ -1,0 +1,66 @@
+.hero {
+  margin-top: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    p {
+      color: #fff;
+      font-family: Gilroy;
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: 1.32px;
+      max-width: 360px;
+    }
+    h2 {
+      color: #1144fa;
+      font-family: Gilroy;
+      font-size: 80px;
+      font-weight: 600;
+      line-height: 97%;
+      letter-spacing: 7.6px;
+      span {
+        color: #fff;
+      }
+    }
+    .hero__input {
+      margin-top: 46px;
+      display: flex;
+      align-items: center;
+      input {
+        border-radius: 25px;
+        background: #fff;
+        padding: 15px 40px;
+        width: 100%;
+        max-width: 593px;
+        &:valid {
+          color: #000;
+          font-family: Gilroy;
+          font-size: 18px;
+          font-weight: 500;
+        }
+        &::placeholder {
+          color: #000;
+          font-family: Gilroy;
+          font-size: 18px;
+          font-weight: 500;
+          opacity: 0.5;
+        }
+      }
+      label {
+        margin-left: -50px;
+        font-size: 30px;
+      }
+    }
+  }
+  .hero__img {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

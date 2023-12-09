@@ -1,3 +1,4 @@
+"use client";
 import "./Footer.scss";
 import React from "react";
 import Image from "next/image";
@@ -17,8 +18,10 @@ import {
   zoodpay,
   zoodpayLogo,
 } from "../../assets/img/index";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathname = usePathname()
   const additionalInfos = [
     "Kurs haqida malumot",
     "Lorem ipsum",
@@ -36,7 +39,7 @@ const Footer = () => {
     footerInstagram,
   ];
   const paymentItems = [upay, payme, masterCard, zoodpayLogo, zoodpay];
-  return (
+  return pathname=="/sign-up"?<></>:(
     <footer>
       <div className="container">
         <div className="footer__wrapper">
@@ -69,7 +72,7 @@ const Footer = () => {
               <h2>Biz bilan bog`laning</h2>
               <div className="social__media__items">
                 {socialMediasLogo.map((item: string, index: number) => (
-                  <Image src={item} alt="index" />
+                  <Image src={item} alt="logo" key={index} />
                 ))}
               </div>
             </div>
@@ -77,7 +80,7 @@ const Footer = () => {
               <h2>To’lovlar:</h2>
               <div className="footer__payment__choices__items">
                 {paymentItems.map((item: string, index: number) => (
-                  <Image src={item} alt="logo" />
+                  <Image src={item} alt="logo" key={index} />
                 ))}
               </div>
             </div>

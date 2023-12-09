@@ -19,9 +19,10 @@ import {
   zoodpayLogo,
 } from "../../assets/img/index";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const Footer = () => {
-  const pathname = usePathname()
+  const pathname = usePathname();
   const additionalInfos = [
     "Kurs haqida malumot",
     "Lorem ipsum",
@@ -39,9 +40,27 @@ const Footer = () => {
     footerInstagram,
   ];
   const paymentItems = [upay, payme, masterCard, zoodpayLogo, zoodpay];
-  return pathname=="/sign-up"||pathname=="/login"?<></>:(
+  return pathname == "/sign-up" || pathname == "/login" ? (
+    <></>
+  ) : (
     <footer>
       <div className="container">
+        <div className="footer__header">
+          <ul>
+            <Link href="/">
+              <li>Asosiy</li>
+            </Link>
+            <Link href="/bought-courses">
+              <li>Sotib olingan kurslar</li>
+            </Link>
+            <Link href="/free-courses">
+              <li>Bepul kurslar</li>
+            </Link>
+            <Link href="/about">
+              <li>Biz haqimizda</li>
+            </Link>
+          </ul>
+        </div>
         <div className="footer__wrapper">
           <div className="footer__info">
             <Image src={navLogo} alt="logo" className="footer-logo" />

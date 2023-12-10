@@ -40,7 +40,7 @@ const Footer = () => {
     footerInstagram,
   ];
   const paymentItems = [upay, payme, masterCard, zoodpayLogo, zoodpay];
-  return pathname.includes("/login"||"/sign-up"||"/admin")? (
+  return pathname.includes("/sign-up")||pathname.includes("/login")||pathname.includes("/admin") ? (
     <></>
   ) : (
     <footer>

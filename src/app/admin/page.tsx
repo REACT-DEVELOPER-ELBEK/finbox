@@ -1,8 +1,13 @@
+"use client"
+import './Admin.scss'
 import React from 'react'
+import Sidebar from '../layout/sidebar/Sidebar'
 
 const Admin = () => {
   return (
-    <div>Admin</div>
+    <div className="admin">
+      <Sidebar/>
+    </div>
   )
 }
 
